@@ -1,6 +1,7 @@
 const sslRedirect = require('heroku-ssl-redirect');
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser')
 
 // middleware for production
 app.use(express.static('dist'));
