@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header'
+import Footer from './Footer'
 
 class Card extends Component {
 
@@ -9,7 +10,7 @@ class Card extends Component {
         <Header/>
         {/* add react router here */}
         <h1>React Router will go here</h1>
-        {/* <Footer/> */}
+        <Footer/>
       </div>
     );
   }
