@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AppRouter from '../router/AppRouter'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -7,10 +8,7 @@ class Card extends Component {
   render() {
     return (
       <div>
-        <Header/>
-        {/* add react router here */}
-        <h1>React Router will go here</h1>
-        <Footer/>
+        <AppRouter/>
       </div>
     );
   }
