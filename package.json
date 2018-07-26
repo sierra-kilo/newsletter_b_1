@@ -1,6 +1,6 @@
 {
-  "name": "newsletter",
-  "version": "b_1",
+  "name": "newsletter_b",
+  "version": "1.0.0",
   "description": "Newsletter subscribe / unsubscribe single page app and data export",
   "main": "src/server/index.js",
   "scripts": {
