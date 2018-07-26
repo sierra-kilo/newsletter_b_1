@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-
+// routes
+require('./routes/api-routes.js')(app)
 
 app.listen(8080, () => console.log('Listening on port 8080!'));
