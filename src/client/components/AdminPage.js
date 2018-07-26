@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import EmailItem from './EmailItem'
 
 class AdminPage extends Component {
 
   render() {
     return (
-      <div></div>
+      <div>
+        <EmailItem/>
+        <EmailItem/>
+        <EmailItem/>
+      </div>
     );
   }
 
