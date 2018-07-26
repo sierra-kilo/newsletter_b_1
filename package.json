@@ -13,6 +13,7 @@
   "author": "Shant",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "heroku-ssl-redirect": "^0.0.4",
     "mysql2": "^1.5.3",
