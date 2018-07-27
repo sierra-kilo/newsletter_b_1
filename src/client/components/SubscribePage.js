@@ -30,7 +30,9 @@ changeState() {
         {!(this.state.submitted) ? (
           <div>
             <MessageArea message={WELCOME_MSG}/>
-            <EmailForm/>
+            <EmailForm
+              actionType='submit'
+              changeState={this.changeState}/>
             {/* <Subscribe changeState={this.changeState}/> */}
           </div>
         ) : (

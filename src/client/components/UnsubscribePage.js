@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import EmailForm from './EmailForm'
 import MessageArea from './MessageArea'
+import {SORRY_MSG, COME_BACK_MSG} from '../../../public/text';
 
 class UnsubscribePage extends Component {
 
@@ -8,8 +9,17 @@ class UnsubscribePage extends Component {
     return (
       <div>
         <h3>Unsubscribe Here Page</h3>
-        <MessageArea/>
-        <EmailForm/>
+        {!(this.state.submitted) ? (
+          <div>
+            <MessageArea message={SORRY_MSG}/>
+            <EmailForm
+              actionType='submit'
+              changeState={this.changeState}/>
+            {/* <Subscribe changeState={this.changeState}/> */}
+          </div>
+        ) : (
+          <MessageArea message={COME_BACK_MSG}/>
+        )}
       </div>
     );
   }
