@@ -13,7 +13,7 @@ class UnsubscribePage extends Component {
           <div>
             <MessageArea message={SORRY_MSG}/>
             <EmailForm
-              actionType='submit'
+              actionType='unsub'
               changeState={this.changeState}/>
             {/* <Subscribe changeState={this.changeState}/> */}
           </div>
