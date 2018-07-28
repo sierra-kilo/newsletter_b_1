@@ -8,7 +8,7 @@ class Admin extends Component {
     this.state = {
     allEmails: []
   }
-  this.hideEmail = this.hideEmail.bind(this)
+  this.hideEmail = this.hideEmail.bind(this, email)
 }
 
   componentDidMount() {
@@ -31,7 +31,7 @@ class Admin extends Component {
             return <EmailItem
               key={email.id}
               email={email.email}
-              onDelete={this.hideEmail}/>
+              onDelete = {() => this.onDelete(this, email.email)}/>
           })}
         </div>
       </div>
