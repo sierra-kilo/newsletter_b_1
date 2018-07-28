@@ -6,8 +6,7 @@ class Admin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    allEmails: [],
-    showEmail: true
+    allEmails: []
   }
   this.hideEmail = this.hideEmail.bind(this)
 }
@@ -21,7 +20,7 @@ class Admin extends Component {
       }))).then(emails => this.setState({allEmails: emails}))
   }
 
-  hideEmail = () => this.setState({showEmail:false})
+  hideEmail = () => this.setState({allEmails:emails})
 
   render() {
     return (
@@ -29,7 +28,10 @@ class Admin extends Component {
         <h2>Admin Page</h2>
         <div>
           {this.state.allEmails.map((email) => {
-            return <EmailItem key={email.id} email={email.email} onDelete={this.hideEmail}/>
+            return <EmailItem
+              key={email.id}
+              email={email.email}
+              onDelete={this.hideEmail}/>
           })}
         </div>
       </div>
