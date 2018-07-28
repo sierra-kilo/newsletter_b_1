@@ -1,8 +1,22 @@
 import React from 'react';
-// need to pass email in from props or state
+import axios from 'axios'
 
-const EmailItem = ({props}) => (
-  <div>Email Item</div>
-);
+const EmailItem = ({email, onDelete}) => (
 
-export default EmailItem;
+  <div>
+    <h3>{email}</h3>
+    <button
+      onClick={(e) => {
+      e.preventDefault()
+      axios.delete("/api/emails/delete/", {
+        data: {email: email}
+      })
+        onDelete()
+      }
+    }
+    >
+      Remove
+  </button>
+  </div>
+)
+export default (EmailItem)
