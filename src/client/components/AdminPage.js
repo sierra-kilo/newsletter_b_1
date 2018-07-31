@@ -8,10 +8,18 @@ class Admin extends Component {
     this.state = {
     allEmails: []
   }
-  this.hideEmail = this.hideEmail.bind(this, email)
+
+  this.fetchEmails = this.fetchEmails.bind(this)
+  this.hideEmail = this.hideEmail.bind(this)
 }
 
   componentDidMount() {
+    this.fetchEmails()
+  }
+
+  hideEmail = () => this.fetchEmails()
+
+  fetchEmails = () => {
     fetch("/api/emails/")
       .then(res => res.json())
       .then(parsedJSON => parsedJSON.map(emails => ({
@@ -19,8 +27,6 @@ class Admin extends Component {
         id: `${emails.id}`
       }))).then(emails => this.setState({allEmails: emails}))
   }
-
-  hideEmail = () => this.setState({allEmails:emails})
 
   render() {
     return (
@@ -31,7 +37,7 @@ class Admin extends Component {
             return <EmailItem
               key={email.id}
               email={email.email}
-              onDelete = {() => this.onDelete(this, email.email)}/>
+              onDelete = {() => this.hideEmail()}/>
           })}
         </div>
       </div>

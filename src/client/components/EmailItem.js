@@ -12,8 +12,7 @@ const EmailItem = ({email, onDelete}) => (
       e.preventDefault()
       axios.delete("/api/emails/delete/", {
         data: {email: email}
-      })
-      onDelete()
+      }).then(() => onDelete())
       }
     }
     >
