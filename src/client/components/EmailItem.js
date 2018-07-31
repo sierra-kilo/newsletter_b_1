@@ -1,5 +1,7 @@
-import React from 'react';
 import axios from 'axios'
+import React, { Component } from 'react';
+
+
 
 const EmailItem = ({email, onDelete}) => (
 
@@ -10,8 +12,7 @@ const EmailItem = ({email, onDelete}) => (
       e.preventDefault()
       axios.delete("/api/emails/delete/", {
         data: {email: email}
-      })
-        onDelete()
+      }).then(() => onDelete())
       }
     }
     >
@@ -20,3 +21,43 @@ const EmailItem = ({email, onDelete}) => (
   </div>
 )
 export default (EmailItem)
+
+
+
+
+
+
+// class EmailItem extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       showEmail: true
+//     };
+//     this.hideEmail = this.hideEmail.bind(this)
+//   }
+//
+//   hideEmail = () => this.setState({showEmail:false})
+//
+//   render() {
+//     return (
+//       <div>
+//         <h3>{this.props.email}</h3>
+//         <button
+//           onClick={(e) => {
+//           e.preventDefault()
+//           axios.delete("/api/emails/delete/", {
+//             data: {email: this.props.email}
+//           })
+//           this.hideEmail()
+//           }
+//         }
+//         >
+//           Remove
+//       </button>
+//       </div>
+//     );
+//   }
+//
+// }
+//
+// export default EmailItem;
