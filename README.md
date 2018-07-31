@@ -2,6 +2,10 @@
 # version b_1
 
 
+TODO:
+----------
+Front End - CSS ALL
+
 [![Build Status](https://travis-ci.org/crsandeep/simple-react-full-stack.svg?branch=master)](https://travis-ci.org/crsandeep/simple-react-full-stack)
 [![Greenkeeper badge](https://badges.greenkeeper.io/crsandeep/simple-react-full-stack.svg)](https://greenkeeper.io/)
 
