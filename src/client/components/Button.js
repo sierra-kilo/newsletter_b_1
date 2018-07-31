@@ -1,9 +1,14 @@
 import React from 'react';
 // button label will be passed in as a prop
 
-const Button = ({buttonLabel}) => (
+const Button = (props) => (
   <div>
-    <button>{buttonLabel}</button>
+    <button
+      style={props.buttonStyle}
+      onClick={props.onClick}
+      >
+      {props.buttonLabel}
+    </button>
   </div>
 );
 

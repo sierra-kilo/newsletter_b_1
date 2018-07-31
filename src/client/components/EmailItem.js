@@ -2,6 +2,16 @@ import axios from 'axios'
 import React, { Component } from 'react';
 import Button from './Button'
 
+const buttonStyleDelete = {
+  backgroundColor:'red'
+}
+
+const handleClick = (e, email, callback) => {
+  e.preventDefault()
+  axios.delete("/api/emails/delete/", {
+    data: {email: email}
+  }).then(() => callback())
+  }
 
 
 const EmailItem = ({email, onDelete}) => (
@@ -10,16 +20,9 @@ const EmailItem = ({email, onDelete}) => (
     <h3>{email}</h3>
     <Button
       buttonLabel={'Delete'}
-      onClick={(e) => {
-      e.preventDefault()
-      axios.delete("/api/emails/delete/", {
-        data: {email: email}
-      }).then(() => onDelete())
-      }
-    }
-    >
-      Remove
-  </Button>
+      buttonStyle={buttonStyleDelete}
+      onClick={e => handleClick(e, email, onDelete)}
+  />
   </div>
 )
 export default (EmailItem)
