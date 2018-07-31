@@ -8,18 +8,18 @@ const EmailItem = ({email, onDelete}) => (
 
   <div>
     <h3>{email}</h3>
-    <Button
-      buttonLabel={'Delete'}
+    <button
+      // buttonLabel={'Delete'}
       onClick={(e) => {
-      e.preventDefault()
-      axios.delete("/api/emails/delete/", {
-        data: {email: email}
-      }).then(() => onDelete())
+        e.preventDefault()
+        axios.delete("/api/emails/delete/", {
+          data: {email: email}
+        }).then(() => onDelete())
       }
     }
     >
-      Remove
-  </Button>
+      remove
+  </button>
   </div>
 )
 export default (EmailItem)
