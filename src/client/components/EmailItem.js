@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { Component } from 'react';
+import Button from './Button'
 
 
 
@@ -7,7 +8,8 @@ const EmailItem = ({email, onDelete}) => (
 
   <div>
     <h3>{email}</h3>
-    <button
+    <Button
+      buttonLabel={'Delete'}
       onClick={(e) => {
       e.preventDefault()
       axios.delete("/api/emails/delete/", {
@@ -17,7 +19,7 @@ const EmailItem = ({email, onDelete}) => (
     }
     >
       Remove
-  </button>
+  </Button>
   </div>
 )
 export default (EmailItem)

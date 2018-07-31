@@ -61,18 +61,6 @@ class EmailForm extends Component {
     return (
       <div>
         <form
-          // onSubmit={this.onSubmit.bind(this)}
-          // onSubmit(e) {
-          //   if(this.props.actionType === 'submit') {
-          //     this.handleSubmitSubscribe(e)
-          //     this.props.changeState()
-          //   } else {
-          //     this.handleSubmitUnsubscribe(e)
-          //     this.props.changeState()
-          //   }
-          // }
-
-
           onSubmit={(e) => {
           (this.props.actionType === 'submit') ?
           this.handleSubmitSubscribe(e)
@@ -86,7 +74,7 @@ class EmailForm extends Component {
             value={this.state.email}
             onChange={this.onEmailChange}/>
           {/* Button needs props to display correct label */}
-          <Button/>
+          <Button buttonLabel={this.props.buttonLabel}/>
         </form>
       </div>
     );

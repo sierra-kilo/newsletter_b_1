@@ -1,9 +1,9 @@
 import React from 'react';
 // button label will be passed in as a prop
 
-const Button = ({props}) => (
+const Button = ({buttonLabel}) => (
   <div>
-    <button>Button label</button>
+    <button>{buttonLabel}</button>
   </div>
 );
 

@@ -31,6 +31,7 @@ changeState() {
           <div>
             <MessageArea message={WELCOME_MSG}/>
             <EmailForm
+              buttonLabel='Signup'
               actionType='submit'
               changeState={this.changeState}/>
             {/* <Subscribe changeState={this.changeState}/> */}
