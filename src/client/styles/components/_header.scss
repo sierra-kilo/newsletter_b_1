@@ -1,0 +1,20 @@
+.logo-img {
+  max-height: 100%;
+  display: inline;
+}
+
+.header-title {
+  padding-right: 20px;
+}
+
+@media #{$medium-and-down} {
+  nav .brand-logo.left {
+    left: 0rem;
+  }
+}
+
+@media #{$small-and-down} {
+  .header-title {
+      font-size: 2.3rem;
+  }
+}
