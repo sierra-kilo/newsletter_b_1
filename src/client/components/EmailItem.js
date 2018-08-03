@@ -2,24 +2,27 @@ import axios from 'axios'
 import React, { Component } from 'react';
 import Button from './Button'
 
+const buttonStyleDelete = {
+  backgroundColor:'red'
+}
+
+const handleClick = (e, email, callback) => {
+  e.preventDefault()
+  axios.delete("/api/emails/delete/", {
+    data: {email: email}
+  }).then(() => callback())
+  }
 
 
 const EmailItem = ({email, onDelete}) => (
 
   <div>
     <h3>{email}</h3>
-    <button
-      // buttonLabel={'Delete'}
-      onClick={(e) => {
-        e.preventDefault()
-        axios.delete("/api/emails/delete/", {
-          data: {email: email}
-        }).then(() => onDelete())
-      }
-    }
-    >
-      remove
-  </button>
+    <Button
+      buttonLabel={'Delete'}
+      buttonStyle={buttonStyleDelete}
+      onClick={e => handleClick(e, email, onDelete)}
+    />
   </div>
 )
 export default (EmailItem)
