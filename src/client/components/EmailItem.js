@@ -22,7 +22,7 @@ const EmailItem = ({email, onDelete}) => (
       buttonLabel={'Delete'}
       buttonStyle={buttonStyleDelete}
       onClick={e => handleClick(e, email, onDelete)}
-  />
+    />
   </div>
 )
 export default (EmailItem)
