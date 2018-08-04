@@ -30,7 +30,7 @@ class Admin extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container max-width'>
         <h2>Admin Page</h2>
         <div>
           {this.state.allEmails.map((email) => {

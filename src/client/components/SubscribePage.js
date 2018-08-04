@@ -25,7 +25,7 @@ changeState() {
 
   render() {
     return (
-      <div>
+      <div className='container max-width'>
         <h3>Subscribe Here Page</h3>
         {!(this.state.submitted) ? (
           <div>

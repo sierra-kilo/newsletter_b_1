@@ -4,5 +4,10 @@ html {
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: $m-size;
+}
+
+@media #{$medium-and-up} {
+  .max-width {
+    max-width: 500px;
+  }
 }
