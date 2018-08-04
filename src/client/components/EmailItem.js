@@ -5,6 +5,9 @@ import Button from './Button'
 const buttonStyleDelete = {
   backgroundColor:'red'
 }
+const lineStyle = {
+  display: 'inline'
+}
 
 const handleClick = (e, email, callback) => {
   e.preventDefault()
@@ -17,12 +20,22 @@ const handleClick = (e, email, callback) => {
 const EmailItem = ({email, onDelete}) => (
 
   <div>
-    <h3>{email}</h3>
-    <Button
-      buttonLabel={'Delete'}
-      buttonStyle={buttonStyleDelete}
-      onClick={e => handleClick(e, email, onDelete)}
-    />
+            <div>
+              <span style={lineStyle}>
+              <h5>
+                {email}
+              </h5>
+            </span>
+              <span style={lineStyle}>
+                <Button
+                  display
+                className="secondary-content"
+                buttonLabel={'Delete'}
+                buttonStyle={buttonStyleDelete}
+                onClick={e => handleClick(e, email, onDelete)}
+                >
+              </Button></span>
+            </div>
   </div>
 )
 export default (EmailItem)

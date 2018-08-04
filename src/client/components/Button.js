@@ -4,6 +4,7 @@ import React from 'react';
 const Button = (props) => (
   <div>
     <button
+      className='waves-effect waves-light btn'
       style={props.buttonStyle}
       onClick={props.onClick}
       >

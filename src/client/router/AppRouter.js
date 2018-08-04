@@ -10,13 +10,15 @@ import AdminPage from '../components/AdminPage'
 
 const AppRouter = () => (
   <BrowserRouter>
-    <div>
+    <div className='flex-holder'>
       <Header/>
-      <Switch>
-        <Route path='/' component={SubscribePage} exact={true} />
-        <Route path='/unsubscribe' component={UnsubscribePage} />
-        <Route path='/admin' component={AdminPage} />
-      </Switch>
+      <main>
+        <Switch>
+          <Route path='/' component={SubscribePage} exact={true} />
+          <Route path='/unsubscribe' component={UnsubscribePage} />
+          <Route path='/admin' component={AdminPage} />
+        </Switch>
+      </main>
       <Footer/>
     </div>
   </BrowserRouter>

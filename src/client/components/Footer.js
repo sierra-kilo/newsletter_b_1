@@ -3,11 +3,13 @@ import {Link} from 'react-router-dom';
 
 
 const Footer = ({}) => (
-  <div>
-    {/* links go here */}
-    <Link to={'/'} style={{ textDecoration: 'none' }}>Subscribe </Link>
-    <Link to={'/unsubscribe'} style={{ textDecoration: 'none' }}>Unsubscribe </Link>
-    <Link to={'/admin'} style={{ textDecoration: 'none' }}>Admin</Link>
+  <div className='center-align page-footer'>
+    <Link className="waves-effect waves-teal btn-flat white-text"
+     to={'/'}> Subscribe </Link>
+    <Link className="waves-effect waves-teal btn-flat white-text"
+      to={'/unsubscribe'}> Unsubscribe </Link>
+    <Link className="waves-effect waves-teal btn-flat white-text"
+      to={'/admin'} > Admin </Link>
   </div>
 );
 
