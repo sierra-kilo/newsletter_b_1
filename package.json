@@ -2,6 +2,9 @@
   "name": "newsletter_b",
   "version": "1.0.0",
   "description": "Newsletter subscribe / unsubscribe single page app and data export",
+  "engines": {
+    "node": "8.10.0"
+  },
   "main": "src/server/index.js",
   "scripts": {
     "start": "node src/server/index.js",
