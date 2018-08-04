@@ -14,8 +14,9 @@ class EmailForm extends Component {
     this.handleSubmitSubscribe = this.handleSubmitSubscribe.bind(this)
     this.handleSubmitUnsubscribe = this.handleSubmitUnsubscribe.bind(this)
   }
+
+
   onEmailChange = (e) => {
-    // Materialize.updateTextFields();
     const email = e.target.value;
     this.setState(() => ({ email }))
   }
@@ -60,6 +61,8 @@ class EmailForm extends Component {
   render() {
     return (
       <div>
+        <div class="row">
+          <div class="input-field col s12">
         <form
           onSubmit={(e) => {
           (this.props.actionType === 'submit') ?
@@ -68,14 +71,32 @@ class EmailForm extends Component {
           this.handleSubmitUnsubscribe(e)
         }}>
 
-
           {/* input needs props to set perams */}
-          <input
+          {/* <input
             value={this.state.email}
-            onChange={this.onEmailChange}/>
-          {/* Button needs props to display correct label */}
-          <Button buttonLabel={this.props.buttonLabel}/>
+            onChange={this.onEmailChange}/> */}
+
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                className="validate"
+                autoFocus
+                value={this.state.email}
+                onChange={this.onEmailChange}
+              />
+              <label for="email" className='active'>Email</label>
+              {/* Button needs props to display correct label */}
+              <br></br>
+              <br></br>
+              <br></br>
+              <Button buttonLabel={this.props.buttonLabel}/>
+
+
         </form>
+      </div>
+    </div>
       </div>
     );
   }
