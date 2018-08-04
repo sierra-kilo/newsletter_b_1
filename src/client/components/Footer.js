@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 
 const Footer = ({}) => (
-  <div className='center-align'>
+  <div className='center-align page-footer'>
     <Link className="waves-effect waves-teal btn-flat blue-text text-lighten-1"
      to={'/'}> Subscribe </Link>
     <Link className="waves-effect waves-teal btn-flat blue-text text-lighten-1"
