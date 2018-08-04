@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
+//Models
+const db = require("./models");
+
 // Sync Database
 db.sequelize.sync().then(function() {
     console.log('Nice! Database looks fine')
