@@ -9,7 +9,7 @@ class Header extends Component {
           <div className="nav-wrapper">
             <img
               className='brand-logo left logo-img responsive-img'
-              src={'../images/logo.png'}/>
+              src={'src/client/images/logo.png'}/>
               <h3 className='header-title right'>Keepers Market</h3>
           </div>
         </nav>
