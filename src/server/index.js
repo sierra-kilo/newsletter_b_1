@@ -5,6 +5,9 @@ const app = express();
 const bodyParser = require('body-parser')
 let PORT = process.env.PORT || 8080;
 
+// enable ssl redirect
+app.use(sslRedirect());
+
 // middleware for production
 app.use(express.static('dist'));
 
