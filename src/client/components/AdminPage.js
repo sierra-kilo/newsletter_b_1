@@ -33,12 +33,17 @@ class Admin extends Component {
       <div className='container max-width'>
         <h2>Admin Page</h2>
         <div>
-          {this.state.allEmails.map((email) => {
-            return <EmailItem
-              key={email.id}
-              email={email.email}
-              onDelete = {() => this.hideEmail()}/>
-          })}
+          <ul className='collection with-header'>
+           <li class="collection-header"><h5>List View</h5></li>
+           <li className="collection-item">{this.state.allEmails.map((email) => {
+             return <EmailItem
+               key={email.id}
+               email={email.email}
+               onDelete = {() => this.hideEmail()}/>
+             })}
+           </li>
+          </ul>
+
         </div>
       </div>
     );
