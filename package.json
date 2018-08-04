@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Newsletter subscribe / unsubscribe single page app and data export",
   "engines": {
-    "node": "8.10.0"
+    "node": "8.10.0",
+    "yarn": "0.28.4"
   },
   "main": "src/server/index.js",
   "scripts": {
