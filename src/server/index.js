@@ -1,9 +1,12 @@
 const sslRedirect = require('heroku-ssl-redirect');
+const path = require('path');
 const express = require('express');
 require('dotenv').config()
 const app = express();
 const bodyParser = require('body-parser')
 let PORT = process.env.PORT || 8080;
+
+const publicPath = path.join(__dirname, '..', '..', 'public');
 
 // enable ssl redirect
 app.use(sslRedirect());
@@ -31,5 +34,9 @@ db.sequelize.sync().then(function() {
 
 // routes
 require('./routes/api-routes.js')(app)
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
 
 app.listen(PORT, () => console.log('Listening on port: ' + PORT));
