@@ -6,7 +6,7 @@ const app = express();
 const bodyParser = require('body-parser')
 let PORT = process.env.PORT || 8080;
 
-const publicPath = path.join(__dirname, '..', '..', 'public');
+const publicPath = path.join(__dirname, '..', '..', 'dist');
 
 // enable ssl redirect
 app.use(sslRedirect());
@@ -35,10 +35,8 @@ db.sequelize.sync().then(function() {
 // routes
 require('./routes/api-routes.js')(app)
 
-app.use(express.static(publicPath));
-
 app.get('*', (req, res) => {
-  res.sendFile(path.join(publicPath, 'index.html'));
+  res.sendFile(path.join(dist, 'index.html'));
 });
 
 app.listen(PORT, () => console.log('Listening on port: ' + PORT));
