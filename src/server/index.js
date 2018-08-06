@@ -35,6 +35,8 @@ db.sequelize.sync().then(function() {
 // routes
 require('./routes/api-routes.js')(app)
 
+app.use(express.static(publicPath));
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
 });
