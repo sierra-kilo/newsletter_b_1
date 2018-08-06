@@ -6,7 +6,7 @@ const app = express();
 const bodyParser = require('body-parser')
 let PORT = process.env.PORT || 8080;
 
-const publicPath = path.join(__dirname, '..', '..', 'dist');
+const dist = path.join(__dirname, '..', '..', 'dist');
 
 // enable ssl redirect
 app.use(sslRedirect());
