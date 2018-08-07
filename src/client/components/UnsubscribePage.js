@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import EmailForm from './EmailForm'
 import MessageArea from './MessageArea'
 import {SORRY_MSG, COME_BACK_MSG} from '../../../public/text';
-import { Redirect } from 'react-router'
+// import { Redirect } from 'react-router'
 
 class UnsubscribePage extends Component {
   constructor(props) {
