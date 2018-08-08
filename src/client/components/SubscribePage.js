@@ -20,7 +20,7 @@ changeState() {
     this.setState({
       submitted: false
     })
-  }, 20000)
+  }, 10000)
 }
 
   render() {

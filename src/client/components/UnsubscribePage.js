@@ -22,7 +22,7 @@ changeState() {
       submitted: false
     })
     this.props.history.push('/')
-  }, 20000);
+  }, 10000);
 }
 
   render() {
