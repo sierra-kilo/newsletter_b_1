@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EmailItem from './EmailItem'
+import {CSVLink, CSVDownload} from 'react-csv';
 
 class Admin extends Component {
 
@@ -28,10 +29,13 @@ class Admin extends Component {
       }))).then(emails => this.setState({allEmails: emails}))
   }
 
+
+
   render() {
     return (
       <div className='container max-width'>
         <h2>Admin Page</h2>
+        <CSVLink data={this.state.allEmails} >Download CSV</CSVLink>
         <div>
           <ul className='collection with-header'>
            <li class="collection-header"><h5>List View</h5></li>
