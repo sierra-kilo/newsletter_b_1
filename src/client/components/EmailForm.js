@@ -61,8 +61,8 @@ class EmailForm extends Component {
   render() {
     return (
       <div>
-        <div class="row">
-          <div class="input-field col s12">
+        <div className="row">
+          <div className="input-field col s12">
         <form
           onSubmit={(e) => {
           (this.props.actionType === 'submit') ?
@@ -70,13 +70,6 @@ class EmailForm extends Component {
           :
           this.handleSubmitUnsubscribe(e)
         }}>
-
-          {/* input needs props to set perams */}
-          {/* <input
-            value={this.state.email}
-            onChange={this.onEmailChange}/> */}
-
-
               <input
                 id="email"
                 name="email"
@@ -86,7 +79,7 @@ class EmailForm extends Component {
                 value={this.state.email}
                 onChange={this.onEmailChange}
               />
-              <label for="email" className='active'>Email</label>
+              <label htmlFor="email" className='active'>Email</label>
               {/* Button needs props to display correct label */}
               <br></br>
               <br></br>
