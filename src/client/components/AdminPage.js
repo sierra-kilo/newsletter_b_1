@@ -38,7 +38,7 @@ class Admin extends Component {
         <CSVLink data={this.state.allEmails} >Download CSV</CSVLink>
         <div>
           <ul className='collection with-header'>
-           <li class="collection-header"><h5>List View</h5></li>
+           <li className="collection-header"><h5>List View</h5></li>
            <li className="collection-item">{this.state.allEmails.map((email) => {
              return <EmailItem
                key={email.id}
