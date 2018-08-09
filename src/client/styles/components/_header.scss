@@ -3,11 +3,14 @@
   font-family: 'Raleway', sans-serif;
   font-weight:bold;
   border-bottom: solid;
-  border-top: solid;
+  // border-top: solid;
   border-color: yellow;
 
 }
 
+.nav-wrapper {
+  background-color: lightgray;
+}
 
 .logo-img {
   max-height: 100%;
