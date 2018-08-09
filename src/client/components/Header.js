@@ -5,18 +5,33 @@ class Header extends Component {
   render() {
     return (
       <div>
+        <div className='header-b4-nav'>
+          <h1 className='center-align'>Keepers Market</h1>
+        </div>
+
         <nav>
+        <div class="nav-wrapper">
+          <a  className="brand-logo right">Coming Soon!</a>
+          <ul id="nav-mobile" className="left hide-on-med-and-down">
+            <li><a>Shop</a></li>
+            <li><a>Newsletter</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </div>
+        </nav>
+
+
+
+
+
+        {/* <nav>
           <div className="nav-wrapper">
             <img
               className='brand-logo left logo-img responsive-img'
               src={'favicon.ico'}/>
-              <h3 className='header-title right'>Keepers Market</h3>
+              <h3 className='header-title right'>Coming Soon!</h3>
           </div>
-        </nav>
-        {/* <h2 className='header-title'>
-          <img src={'../../../public/favicon.ico'} style={imgStyle}/>
-          Keepers Market
-        </h2> */}
+        </nav> */}
       </div>
     );
   }
