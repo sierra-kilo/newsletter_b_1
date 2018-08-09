@@ -20,6 +20,10 @@ main {
   cursor: pointer;
 }
 
+.list-view-collection {
+  padding-bottom: 50px;
+}
+
 @media #{$medium-and-up} {
   .max-width {
     max-width: 500px;

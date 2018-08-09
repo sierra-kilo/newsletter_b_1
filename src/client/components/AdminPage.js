@@ -33,7 +33,7 @@ class Admin extends Component {
 
   render() {
     return (
-      <div className='container max-width'>
+      <div className='container max-width list-view-collection'>
         <h2>Admin Page</h2>
         <CSVLink data={this.state.allEmails} >Download CSV</CSVLink>
         <div>
