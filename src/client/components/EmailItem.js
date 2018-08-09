@@ -5,9 +5,7 @@ import Button from './Button'
 const buttonStyleDelete = {
   backgroundColor:'red'
 }
-const lineStyle = {
-  display: 'inline'
-}
+
 
 const handleClick = (e, email, callback) => {
   e.preventDefault()
@@ -19,63 +17,26 @@ const handleClick = (e, email, callback) => {
 
 const EmailItem = ({email, onDelete}) => (
 
+<li className="collection-item">
   <div>
-            <div>
-              <span style={lineStyle}>
-              <h5>
-                {email}
-              </h5>
-            </span>
-              <span style={lineStyle}>
-                <Button
-                  display
-                className="secondary-content"
-                buttonLabel={'Delete'}
-                buttonStyle={buttonStyleDelete}
-                onClick={e => handleClick(e, email, onDelete)}
-                >
-              </Button></span>
-            </div>
+    {email}
+
+      <a className='secondary-content'>
+        <i
+          className='material-icons use-pointer'
+          onClick={e => handleClick(e, email, onDelete)}
+          >delete</i>
+
+
+        {/* <Button
+          className='-small'
+          buttonLabel={'Delete'}
+          buttonStyle={buttonStyleDelete}
+          onClick={e => handleClick(e, email, onDelete)}/> */}
+      </a>
+
+
   </div>
+</li>
 )
 export default (EmailItem)
-
-
-
-
-
-
-// class EmailItem extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       showEmail: true
-//     };
-//     this.hideEmail = this.hideEmail.bind(this)
-//   }
-//
-//   hideEmail = () => this.setState({showEmail:false})
-//
-//   render() {
-//     return (
-//       <div>
-//         <h3>{this.props.email}</h3>
-//         <button
-//           onClick={(e) => {
-//           e.preventDefault()
-//           axios.delete("/api/emails/delete/", {
-//             data: {email: this.props.email}
-//           })
-//           this.hideEmail()
-//           }
-//         }
-//         >
-//           Remove
-//       </button>
-//       </div>
-//     );
-//   }
-//
-// }
-//
-// export default EmailItem;

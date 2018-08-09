@@ -16,6 +16,10 @@ main {
   flex: 1 0 auto;
 }
 
+.use-pointer {
+  cursor: pointer;
+}
+
 @media #{$medium-and-up} {
   .max-width {
     max-width: 500px;

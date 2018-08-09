@@ -39,13 +39,13 @@ class Admin extends Component {
         <div>
           <ul className='collection with-header'>
            <li className="collection-header"><h5>List View</h5></li>
-           <li className="collection-item">{this.state.allEmails.map((email) => {
+           {this.state.allEmails.map((email) => {
              return <EmailItem
                key={email.id}
                email={email.email}
                onDelete = {() => this.hideEmail()}/>
              })}
-           </li>
+
           </ul>
 
         </div>
