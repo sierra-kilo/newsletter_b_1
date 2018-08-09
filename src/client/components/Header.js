@@ -10,7 +10,7 @@ class Header extends Component {
         </div>
 
         <nav>
-        <div class="nav-wrapper">
+        <div className="nav-wrapper">
           <a  className="brand-logo right">Coming Soon!</a>
           <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li><a>Shop</a></li>
