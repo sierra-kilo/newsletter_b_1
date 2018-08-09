@@ -17,12 +17,17 @@ changeState() {
   this.setState({
     submitted: true //!(this.state.submitted)
   })
+  this.myInterval =
   setInterval(() => {
     this.setState({
       submitted: false
     })
     this.props.history.push('/')
-  }, 20000);
+  }, 10000);
+}
+
+componentWillUnmount = () => {
+  clearInterval(this.myInterval)
 }
 
   render() {

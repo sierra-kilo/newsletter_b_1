@@ -1,5 +1,5 @@
 html {
-  font-size: 62.5%;
+  font-size: 75%;
 }
 
 body {
@@ -14,6 +14,14 @@ body {
 
 main {
   flex: 1 0 auto;
+}
+
+.use-pointer {
+  cursor: pointer;
+}
+
+.list-view-collection {
+  padding-bottom: 50px;
 }
 
 @media #{$medium-and-up} {

@@ -5,6 +5,7 @@
 
 .header-title {
   padding-right: 20px;
+  margin-top: 10px;
 }
 
 @media #{$medium-and-down} {
@@ -15,6 +16,6 @@
 
 @media #{$small-and-down} {
   .header-title {
-      font-size: 2.3rem;
+      font-size: 2rem;
   }
 }
