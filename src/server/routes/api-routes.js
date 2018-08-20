@@ -40,4 +40,15 @@ module.exports = function(app) {
     });
   });
 
+
+  // get password
+  app.get("/api/password/", function(req, res) {
+    db.Password.findAll({
+      // attributes: ['password']
+    })
+    .then(function(dbPassword) {
+      res.json(dbPassword);
+    });
+  });
+
 };
