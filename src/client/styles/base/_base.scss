@@ -24,6 +24,10 @@ main {
   padding-bottom: 50px;
 }
 
+.error {
+  color: red
+}
+
 @media #{$medium-and-up} {
   .max-width {
     max-width: 500px;
