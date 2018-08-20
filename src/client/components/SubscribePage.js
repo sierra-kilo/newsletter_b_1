@@ -32,7 +32,7 @@ componentWillUnmount = () => {
   render() {
     return (
       <div className='container max-width'>
-        <h3>Subscribe Here Page</h3>
+        <h3>Subscribe Here</h3>
         {!(this.state.submitted) ? (
           <div>
             <MessageArea message={WELCOME_MSG}/>

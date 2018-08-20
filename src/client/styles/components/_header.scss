@@ -1,3 +1,17 @@
+.header-b4-nav {
+  min-height: 90px;
+  font-family: 'Raleway', sans-serif;
+  font-weight:bold;
+  border-bottom: solid;
+  // border-top: solid;
+  border-color: yellow;
+
+}
+
+.nav-wrapper {
+  background-color: lightgray;
+}
+
 .logo-img {
   max-height: 100%;
   display: inline;
@@ -6,6 +20,8 @@
 .header-title {
   padding-right: 20px;
   margin-top: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-weight:bold;
 }
 
 @media #{$medium-and-down} {
